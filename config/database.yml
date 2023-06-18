@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 30
+  timeout: 5000
+  username: sayak
+  password: sayak
+  host: localhost
+
+development:
+  <<: *default
+  database: beta_development
+test:
+  <<: *default
+  database: beta_test
+
